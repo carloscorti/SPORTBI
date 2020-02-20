@@ -1,0 +1,40 @@
+<form>
+
+  <div class="form-group">
+    <label for="Jugador">Jugador</label>
+    <select class="form-control" id="Jugador">
+      <option *ngFor="let jugador of jugadores">{{jugador.nombre}}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="Actividad">Actividad</label>
+    <select class="form-control" id="Actividad">
+      <option *ngFor="let actividad of actividades">{{actividad.codigo}} : {{actividad.descripcion}}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="Fecha">Fecha</label>
+    <input type="date" class="form-control" id="Fecha">
+  </div>
+
+  <div class="form-group">
+    <label for="Turno">Turno</label>
+    <br>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons" id="Turno">
+      <label class="btn btn-secondary active">
+        <input type="radio" name="options" id="option1" checked> Mañana
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option3"> Tarde
+      </label>
+    </div>
+
+  </div>
+  <div class="form-group">
+    <label for="Observaciones">Obsrvaciones</label>
+    <textarea class="form-control" id="Observaciones" rows="3"></textarea>
+  </div>
+</form>
+
